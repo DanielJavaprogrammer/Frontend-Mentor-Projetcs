@@ -22,6 +22,7 @@
     --color_Light_lavender: hsl(241, 100%, 89%);
     --color_DarkGray_blue: hsl(224, 30%, 27%);
 }
+
 *{
     margin: 0;
     padding: 0;
