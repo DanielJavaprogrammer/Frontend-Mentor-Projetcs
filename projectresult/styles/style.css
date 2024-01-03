@@ -137,6 +137,9 @@ ul{
     display: flex; 
 }
 
+li{
+    margin-right: 5px;
+}
 .textsocre{
     color: black;
     font-weight: 700;
