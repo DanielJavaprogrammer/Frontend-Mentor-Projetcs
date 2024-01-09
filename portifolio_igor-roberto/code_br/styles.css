@@ -1,15 +1,3 @@
-/*Main style*/
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    user-select: none;
-    scroll-behavior: smooth;
-}
-
-
-
 body {
     background-color: #0f1724;
     height: 100vh;
