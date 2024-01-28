@@ -24,24 +24,78 @@
             <img src="/dashboard/images/image-jeremy.png" alt="">
             <p>Report For</p>
             <h1>Jeremy Robson</h1>
-          </div>
+          </div> <!--End profile-->
 
           <div class="months">
             <ul>
-              <li>Dail</li>
-              <li>Weekly</li>
-              <li>Monthly</li>
+                <li><a class="selected" onclick="selectOption(this)">Daily</a></li>
+                <li><a onclick="selectOption(this)">Weekly</a></li>
+                <li><a onclick="selectOption(this)">Monthly</a></li>
+            </ul>
+        </div> <!--End months-->
+        </div> <!--End iten-1-->
+
+        <div class="iten iten-2">
+          <div class="work">
+            <img src="/dashboard/images/icon-work.svg" alt="work">
+          </div>
+
+          <div class="work-content">
+            <ul>
+              <li>Work</li>
+              <li><img src="/dashboard/images/icon-ellipsis.svg" alt=""></li>
             </ul>
           </div>
         </div>
-        <div class="iten iten-2">2</div>
-        <div class="iten iten-3">3</div>
-        <div class="iten iten-4">4</div>
-        <div class="iten iten-5">5</div>
-        <div class="iten iten-7">6</div>
-        <div class="iten iten-8">7</div>
-      </div>
-  </div>
-</body>
 
+        <div class="iten iten-3">
+          <div class="play">
+            <img src="/dashboard/images/icon-play.svg" alt="play">
+          </div>
+          <div class="play-content"></div>
+        </div>
+
+        <div class="iten iten-4">
+          <div class="study">
+            <img src="/dashboard/images/icon-study.svg" alt="">
+          </div>
+          <div class="study-content"></div>
+        </div>
+
+        <div class="iten iten-5">
+          <div class="exercise">
+            <img src="/dashboard/images/icon-exercise.svg" alt="">
+          </div>
+          <div class="exercise-content"></div>
+        </div>
+
+        <div class="iten iten-7">
+          <div class="social">
+            <img src="/dashboard/images/icon-social.svg" alt="">
+          </div>
+          <div class="social-content"></div>
+        </div>
+
+        <div class="iten iten-8">
+          <div class="self_care">
+            <img src="/dashboard/images/icon-self-care.svg" alt="">
+          </div>
+          <div class="self_care-content"></div>
+        </div>
+
+      </div> <!--End Boxes-->
+  </div> <!--End Main-->
+</body>
+<script>
+  function selectOption(element) {
+    // Remover a classe 'selected' de todos os elementos
+    document.querySelectorAll('.months a').forEach((el) => {
+        el.classList.remove('selected');
+    });
+
+    // Adicionar a classe 'selected' ao elemento clicado
+    element.classList.add('selected');
+}
+
+</script>
 </html>
