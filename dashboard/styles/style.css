@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --Blue: hsl(246, 80%, 60%);
+    --Light-red: hsl(15, 100%, 70%);
+    /*(work)*/
+    --Soft-blue: hsl(195, 74%, 62%);
+    /*( play)*/
+    --Light-red: hsl(348, 100%, 68%);
+    /*( study)*/
+    --Lime-green: hsl(145, 58%, 55%);
+    /*( exercise)*/
+    --Violet: hsl(264, 64%, 52%);
+    /*( social):)*/
+    --Soft-orange: hsl(43, 84%, 65%);
+    /*( self care)*/
+
+    /*Neutral*/
+    --Very-dark-blue: hsl(226, 43%, 10%);
+    --Dark-blue: hsl(235, 46%, 20%);
+    --Desaturated-blue: hsl(235, 45%, 61%);
+    --Pale-Blue: hsl(236, 100%, 87%);
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.main {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.178);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxes{
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 240px));
+    grid-template-rows: repeat(2, minmax(100px, 260px));
+    gap: 15px;
+}
+.iten{
+
+    background-color: rgb(117, 62, 134);
+    font-size: 1rem;
+    border-radius: 20px;
+}
+
+.iten:nth-child(even){
+    background-color: rgb(19, 99, 55);
+}
+
+.iten:nth-child(1){
+    grid-row: 1/ span 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.profile img{
+    width: 6rem;
+    border: 3px solid #fff;
+    border-radius: 50px;
+}
+
+.profile{
+    background-color: var(--Blue);
+    height: 65%;
+}
