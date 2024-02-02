@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Rubik';
 }
 
 :root {
@@ -59,6 +59,7 @@ body {
     background-color: var(--Dark-blue);
     font-size: 1rem;
     border-radius: 20px;
+    z-index: 0;
 }
 
 .iten:nth-child(1){
@@ -68,6 +69,7 @@ body {
     align-items: center;
     justify-content: space-between;
     background-color: var(--Dark-blue);
+    z-index: 5;
 
 }
 
@@ -159,6 +161,7 @@ a.selected {
 
 .iten:nth-child(2){
     background-color: var(--Light-orange);
+    z-index: 4;
 }
 
 
@@ -220,7 +223,7 @@ a.selected {
 }
 
 .iten:nth-child(5){
-    background-color: var(--Lime-green)
+    background-color: var(--Lime-green);
 }
 
 .social{
@@ -239,10 +242,62 @@ a.selected {
     border-radius: 20px;
 }
 
-.iten:nth-child(7){
+.iten:nth-child(6){
     background-color: var(--Violet);
 }
 
+.self_care{
+    background-color: var(--Soft-orange);
+    height: 20%;
+    text-align: right;
+    padding-right: 20px;
+    border-radius: 20px;
+}
 
+.self_care-content{
+    background-color: var(--Dark-blue);
+    height: 80%;
+    border-top-right-radius: 20px ;
+    border-top-left-radius: 20px;
+    border-radius: 20px;
+}
 
+.iten:nth-child(7){
+    background-color: var(--Soft-orange);
+}
 
+.work-content,
+.play-content,
+.study-content,
+.exercise-content,
+.social-content,
+.self_care-content{
+    display: flex;
+    flex-direction: column;
+    padding: 20px ;
+    justify-content: space-between;
+}
+
+.listas{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+li img{
+    cursor: pointer;
+    padding: 5px;
+}
+
+.text h1{
+    font-size: 3em;
+    font-weight: 100;
+    padding-bottom:.3em ;
+}
+
+.text p{
+    font-size: .9rem;
+    font-weight: 100;
+    padding-bottom:.5em;
+    color: var(--Pale-Blue);
+}
