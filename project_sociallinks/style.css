@@ -51,6 +51,11 @@ img {
     border-radius: 50%;
 }
 
+img:hover {
+    box-shadow: #fff 0px 0px 12px;
+    transition: .1s;
+}
+
 h1 {
     font-size: 1.4rem;
     margin-top: 25px;
