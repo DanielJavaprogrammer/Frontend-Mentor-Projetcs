@@ -26,8 +26,9 @@ body {
     flex-direction: column;
 }
 
-main{
+main {
     min-width: 300px;
+    max-width: 400px;
     background-color: var(--color-dark_gray);
     display: flex;
     flex-direction: column;
@@ -36,58 +37,61 @@ main{
     padding: 40px;
     margin-bottom: 20px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
-.avatar{
+.avatar {
     width: 100%;
 }
 
-img{
-    width: 15%;
+img {
+    min-width: 15%;
+    max-width: 30%;
     border-radius: 50%;
 }
 
-h1{
+h1 {
     font-size: 1.4rem;
     margin-top: 25px;
 }
 
-p{
+p {
     margin: 5px 0;
     font-size: 1rem;
 }
 
-span{
+span {
     color: var(--color-Green);
     font-weight: 600;
     font-size: 1rem;
 }
 
-.socialMidias{
+.socialMidias {
     margin-top: 20px;
 }
 
-main .socialMidias ol{
+main .socialMidias ol {
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-main .socialMidias ol li{
+main .socialMidias ol li {
     background-color: var(--color-gray);
     border-radius: 5px;
     padding: 10px 20px;
 }
 
-main .socialMidias ol li:hover{
+main .socialMidias ol li:hover {
     background-color: var(--color-white);
     color: var(--color-off_black);
     font-weight: 600;
     box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
 }
 
-a{
+a {
     color: var(--color-white);
     text-decoration: none;
 }
@@ -118,8 +122,8 @@ a{
 .attribution {
     font-size: 11px;
     text-align: center;
-  }
+}
 
-  .attribution a {
+.attribution a {
     color: hsl(228, 45%, 44%);
-  }
+}
