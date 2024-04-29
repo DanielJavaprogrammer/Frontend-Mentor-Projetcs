@@ -37,9 +37,16 @@
     </header>
 
     <script>
+        var open = false;
         function menuButton(){
-            var menu = document.querySelector("ul");
-
+            var menu = document.getElementById("hamb");
+            open = !open;
+            if (open){
+                menu.style.display = "block"
+            }
+            else{
+                menu.style.display = 'none';
+            }
         }
     </script>
   
