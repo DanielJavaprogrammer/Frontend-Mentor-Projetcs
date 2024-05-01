@@ -20,9 +20,9 @@ body{
     color: var(--black);
 }
 
-header{
+/* header{
     background-color: lightblue;
-}
+} */
 
 header .cabeca{ 
     padding-inline: 1rem; /*esquerda e direira*/
@@ -46,37 +46,13 @@ header .cabeca nav ul li a{
     color: var(--black);
 } 
 
-.menuMoba{
-    cursor: pointer;
-    padding-block: 5px;
-    display: none;
-}
+header .cabeca nav ul li a:hover{
+    color: var(--soft_orange);
+} 
 
-nav{
-    display: block;
-}
 
-@media screen and (max-width: 750px){
-    .menuMoba{
-        display: block;
-    }
+/* Header above ends here */
 
-    ul{
-        position: absolute;
-        top: 0;
-        left: 0;
-    
-        flex-direction: column;
-        background-color: gray;
-        height: 100vh;
-        width: 200px;
-        text-align: center;
-        /* margin: -200px; */
-    }
-
-    nav{
-        display: none;
-    }
-}
+/* main bellow begins here */
 
 
