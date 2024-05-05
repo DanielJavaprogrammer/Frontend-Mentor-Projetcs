@@ -56,3 +56,22 @@ header .cabeca nav ul li a:hover{
 /* main bellow begins here */
 
 
+.mainContent{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    background-color: gray;
+}
+
+.mainContent_image:nth-child(1){
+
+}
+
+.mainContent_image{
+    width: 300px;
+}
+
+.mainContent_image img{
+    width: 100%;
+}
