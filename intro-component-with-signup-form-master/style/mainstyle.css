@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+}
+
+:root {
+    /* Primaries Colors */
+    --red: hsl(0, 100%, 74%);
+    --Green: rgb(56, 204, 140);
+    --white: #fff;
+    /* Accents Colors */
+    --Blue: hsl(248, 32%, 49%);
+    /* Neutral Colors */
+    --Dark-Blue: hsl(249, 10%, 26%);
+    --Grayish-Blue: hsl(246, 25%, 77%);
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', 'Trebuchet MS', sans-serif;
+    background: url(../images/bg-intro-desktop.png) var(--red);
+}
+
+#content {
+    max-width: 1440px;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 110px;
+}
+
+/* left side starts here */
+.contant-left {
+    color: var(--white);
+    padding-right: 40px;
+    max-width: 500px;
+}
+
+.contant-left h1 {
+    font-size: 3rem;
+
+}
+
+.contant-left h2 {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* left side ends here */
+
+/* right side starts here */
+.content-right {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.content-right-alarm {
+    background-color: var(--Blue);
+    padding: 15px 5px;
+    text-align: center;
+    color: var(--white);
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 1em;
+}
+
+.content-right {
+    max-width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    padding: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+
+}
+
+input {
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(128, 128, 128, 0.286);
+    font-family: 'Poppins';
+}
+
+input:nth-child(9) {
+    cursor: pointer;
+    background-color: var(--Green);
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--white);
+    font-weight: 500;
+}
+
+input:nth-child(9):hover {
+    background-color: rgb(82, 219, 160);
+}
+
+input::placeholder {
+    font-weight: 600;
+    font-family: 'Poppins';
+}
+
+form p {
+    font-size: .8rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 720px) {
+    #content {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .contant-left h1 {
+        font-size: 2rem;
+    }
+}
