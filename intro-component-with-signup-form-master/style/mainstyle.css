@@ -145,3 +145,7 @@ form p {
         margin-bottom: 15px;
     }
 }
+
+#inputForm{
+    border: .5px solid var(--red);
+}
