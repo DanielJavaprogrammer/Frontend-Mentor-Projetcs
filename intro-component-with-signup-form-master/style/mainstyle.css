@@ -114,6 +114,10 @@ form p {
     font-size: .8rem;
     text-align: center;
 }
+a{
+    text-decoration: none;
+    color: var(--red);
+}
 
 .attribution {
     text-align: center;
