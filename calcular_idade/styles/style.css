@@ -125,3 +125,33 @@ footer {
     width: 100%;
     margin-bottom: 30px;
 }
+
+@media screen and (min-width: 700px) {
+    main {
+        min-width: 600px;
+        padding: 30px;
+    }
+
+    .button-submit {
+        text-align: right;
+        margin: 0;
+    }
+
+    .resultado {
+        font-size: 2.5rem;
+    }
+
+    .input-data-itens input {
+        min-width: 130px;
+    }
+
+    .input-data {
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .input-data-itens input {
+        max-width: 95px;
+    }
+}
