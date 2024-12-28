@@ -52,7 +52,7 @@ main{
 
 .contaiter-avatar{
     background-color: var(--blue);
-    padding: 20px;
+    padding: 30px;
     border-radius: 10px;
 }
 
@@ -100,7 +100,7 @@ main{
 .avatar-dias{
     display: flex;
     flex-direction: column;
-    padding: 30px 20px;
+    padding: 30px 30px;
     gap: 20px;
 }
 
@@ -117,9 +117,71 @@ a.ativo{
     color: var(--pale-blue);
 }
 
+/**/
+
 main .box{
-    border: 1px solid lightsalmon;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 16px;
+    
+}
+
+.work {
+    background: var(--light-red-work) url(../Dashboard/images/icon-work.svg) no-repeat top right;
+}
+
+.play{
+    background: var(--soft-blue-play) url(../Dashboard/images/icon-play.svg) no-repeat top right;
+}
+
+.study{
+    background: var(--light-red-study) url(../Dashboard/images/icon-study.svg) no-repeat top right;
+}
+
+.exercise{
+    background: var(--lime-green-exercise) url(../Dashboard/images/icon-exercise.svg) no-repeat top right;
+}
+
+.social{
+    background: var(--violet-social) url(../Dashboard/images/icon-social.svg) no-repeat top right;
+}
+
+.selfCare{
+    background: var(--soft-orange-self-care) url(../Dashboard/images/icon-self-care.svg) no-repeat top right;
+}
+
+
+
+.item{
+    background-color: var(--dark-blue);
+    margin-top: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: calc(100% - 40px);
+    border-radius: 16px;
     padding: 20px;
+}
+
+.header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 500;
+}
+
+.box i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.item h1{
+    font-size: 2.7rem;
+    font-weight: 300;
+}
+
+.item span{
+    font-size: .8rem;
+    color: var(--pale-blue);
 }
