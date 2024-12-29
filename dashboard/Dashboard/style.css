@@ -34,6 +34,8 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 30px;
 
     font-family: 'Rubik', sans-serif;
 }
@@ -124,7 +126,10 @@ a.ativo{
 main .box{
     color: #fff;
     border-radius: 16px;
-    
+}
+
+main .box:hover{
+    cursor: pointer;
 }
 
 .work {
@@ -165,6 +170,7 @@ main .box{
     padding: 20px;
 }
 
+
 .item .header{
     display: flex;
     width: 100%;
@@ -187,6 +193,11 @@ main .box{
     font-size: .8rem;
     color: var(--pale-blue);
 }
+
+/* Assinatura */
+.attribution { font-size: 11px; text-align: center; color: #fff; }
+.attribution a { color: hsl(228, 45%, 44%); text-decoration: none; color: var(--pale-blue);}
+
 
 @media screen and (max-width: 765px){
 
