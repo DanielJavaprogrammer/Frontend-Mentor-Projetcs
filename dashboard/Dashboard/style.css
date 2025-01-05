@@ -127,6 +127,7 @@ a.ativo{
 main .box{
     color: #fff;
     border-radius: 16px;
+    
 }
 
 main .box:hover{
@@ -241,11 +242,12 @@ main .box:hover{
     
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     main {
         grid-template-columns: 1fr;
         grid-auto-flow: row; /* Garante que as seções fluam verticalmente */
         gap: 15px; /* Adiciona um espaço adequado entre as seções */
+        width: 80%;
     }
 
     .avatar-sec {
@@ -282,7 +284,9 @@ main .box:hover{
     .item-tempo{
         display: flex;
         align-items: center;
+        justify-content: space-between;
         gap: 40px;
+        margin: 10px 0;
     }
     
 }
