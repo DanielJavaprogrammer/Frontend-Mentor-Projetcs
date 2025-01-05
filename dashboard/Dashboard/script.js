@@ -26,7 +26,7 @@ const data = {
         study: { current: "40hrs", previous: "Last Month - 30hrs" },
         exercise: { current: "20hrs", previous: "Last Month - 15hrs" },
         social: { current: "30hrs", previous: "Last Month - 20hrs" },
-        selfCare: { current: "25hrs", previous: "Last Month - 18hrs" },
+        selfCare: { current: "25hrs", previous: "Last Month - 10hrs" },
     },
 };
 
@@ -49,7 +49,6 @@ function updateData(period) {
         }
     }
 }
-
 
 daily.addEventListener('click', () => {
     removeAtivo();
