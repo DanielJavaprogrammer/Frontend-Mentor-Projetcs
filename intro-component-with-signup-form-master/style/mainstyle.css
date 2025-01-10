@@ -17,140 +17,100 @@
     --Grayish-Blue: hsl(246, 25%, 77%);
 }
 
+html {
+    height: 100%;
+}
+
 body {
     width: 100%;
-    height: 100vh;
-    font-family: 'Poppins', 'Trebuchet MS', sans-serif;
-    background: url(../images/bg-intro-desktop.png) var(--red);
-}
+    min-height: 100%;
+    background: url(../images/bg-intro-desktop.png);
+    background-color: var(--red);
+    background-size: cover;
 
-#content {
-    max-width: 1440px;
-    height: 100vh;
-    margin: auto;
     display: flex;
     align-items: center;
-    justify-content: space-around;
-    padding: 0 110px;
+    justify-content: center;
+
+    font-family: 'Poppins';
 }
 
-/* left side starts here */
-.contant-left {
+main {
+    display: flex;
+    max-width: 1440px;
+    padding-inline: 30px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.left {
     color: var(--white);
-    padding-right: 40px;
-    max-width: 500px;
+    max-width: 400px;
 }
 
-.contant-left h1 {
-    font-size: 3rem;
-
+.left p {
+    font-size: .9rem;
 }
 
-.contant-left h2 {
-    font-size: 1rem;
-    font-weight: 400;
-    padding-block: 20px;
-}
-
-/* left side ends here */
-
-/* right side starts here */
-.content-right {
+.right {
     display: flex;
     flex-direction: column;
-
+    gap: 20px;
 }
 
-.content-right-alarm {
+.button_try {
     background-color: var(--Blue);
-    padding: 15px 5px;
+    color: #fff;
     text-align: center;
-    color: var(--white);
-    font-weight: 500;
+    padding: 15px;
     border-radius: 10px;
-    font-size: 1em;
 }
 
-.content-right {
-    max-width: 500px;
-}
-
-form {
+.form {
     display: flex;
     flex-direction: column;
     background-color: var(--white);
     padding: 30px;
-    margin-top: 20px;
     border-radius: 10px;
-
+    max-width: 600px;
+    min-width: 450px;
+    gap: 10px;
 }
 
-input {
-    padding: 16px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 1px solid rgba(128, 128, 128, 0.286);
+.form input {
+    max-width: 100%;
+    padding: 20px;
+    border: 1px solid var(--Grayish-Blue);
+    border-radius: 5px;
+    outline-color: rgba(63, 63, 63, 0.722);
+}
+
+.form input::placeholder {
     font-family: 'Poppins';
-}
-
-input:nth-child(9) {
-    cursor: pointer;
-    background-color: var(--Green);
-    font-size: 1rem;
-    text-transform: uppercase;
-    color: var(--white);
     font-weight: 500;
 }
 
-input:nth-child(9):hover {
-    background-color: rgb(82, 219, 160);
-}
-
-input::placeholder {
-    font-weight: 600;
-    font-family: 'Poppins';
-}
-
-form p {
-    font-size: .8rem;
+#btn-submit {
+    padding: 15px;
+    border-radius: 10px;
     text-align: center;
+    border: none;
+    cursor: pointer;
+    background-color: var(--Green);
+    color: var(--white);
+    text-transform: uppercase;
+    font-weight: 800;
 }
-a{
+
+.right h3 {
+    font-size: .6rem;
+    text-align: center;
+    color: var(--Grayish-Blue);
+    font-weight: 400;
+}
+
+.right a {
     text-decoration: none;
     color: var(--red);
-}
-
-.attribution {
-    text-align: center;
-    margin-top: 30px;
-    padding-inline: 10px;
-}
-
-@media screen and (max-width: 720px) {
-    #content {
-        flex-direction: column;
-        justify-content: center;
-    }
-}
-
-@media screen and (max-width: 945px) {
-    .contant-left h1 {
-        font-size: 2rem;
-        margin-bottom: 20px;
-    }
-
-    div#content {
-        padding: 0 50px;
-        margin-top: 50px;
-    }
-
-    .contant-left {
-        padding-right: 0;
-        text-align: center;
-        margin-bottom: 15px;
-    }
-}
-
-#inputForm{
-    border: .5px solid var(--red);
 }
