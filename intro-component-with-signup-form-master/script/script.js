@@ -16,7 +16,7 @@ enviar.addEventListener('click', () => {
         input.style.borderColor = 'red'; // Adiciona uma borda vermelha ao campo
     }
 
-    function imgErro(img){
+    function imgErro(img) {
         img.style.display = 'block';
     }
 
@@ -27,18 +27,18 @@ enviar.addEventListener('click', () => {
         imgErro(imgError)
     }
 
-    if(inputLname === '') {
-        error(sobrenome); 
-        imgErro(imgError)
-    }   
-
-    if(emailinput === '') {
-        error(email); 
+    if (inputLname === '') {
+        error(sobrenome);
         imgErro(imgError)
     }
 
-    if(inputsenha === '') {
-        error(senha); 
+    if (emailinput === '') {
+        error(email);
+        imgErro(imgError)
+    }
+
+    if (inputsenha === '') {
+        error(senha);
         imgErro(imgError)
     }
 })  

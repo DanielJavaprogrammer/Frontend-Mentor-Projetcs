@@ -117,12 +117,12 @@ main {
     color: var(--red);
 }
 
-.dados_input{
+.dados_input {
     position: relative;
     width: 100%;
 }
 
-.img_erro{
+.img_erro {
     max-width: 25px;
     position: absolute;
     right: 20px;
