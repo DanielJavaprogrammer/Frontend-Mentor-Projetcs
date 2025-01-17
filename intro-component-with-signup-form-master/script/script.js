@@ -1,44 +1,86 @@
-const enviar = document.getElementById('btn-submit')
+// Validação de Formulário com Mensagens de Erro e Sucesso
+const enviar = document.getElementById('btn-submit');
 
-enviar.addEventListener('click', () => {
-    const nome = document.getElementById('firstNome')
+enviar.addEventListener('click', (event) => {
+    const nome = document.getElementById('firstNome');
     const sobrenome = document.getElementById('lastName');
     const email = document.getElementById('email');
     const senha = document.getElementById('password');
-    const imgError = document.querySelector('.img_erro');
+    
+    const spanErroNome = document.getElementById('text-erro-nome');
+    const spanErroSobrenome = document.getElementById('text-erro-sobrenome');
+    const spanErroEmail = document.getElementById('text-erro-email');
+    const spanErroPassword = document.getElementById('text-erro-password');
 
     const inputFname = nome.value.trim();
     const inputLname = sobrenome.value.trim();
     const emailinput = email.value.trim();
     const inputsenha = senha.value.trim();
 
-    function error(input) {
-        input.style.borderColor = 'red'; // Adiciona uma borda vermelha ao campo
+    let formValid = true;
+
+    function showError(input, span, placeholderText = '') {
+        input.style.borderColor = 'red';
+        span.style.display = 'block';
+        if (placeholderText) {
+            input.value = '';
+            input.placeholder = placeholderText;
+        }
     }
 
-    function imgErro(img) {
-        img.style.display = 'block';
+    function removeError(input, span, defaultPlaceholder = '') {
+        input.style.borderColor = '';
+        span.style.display = 'none';
+        if (defaultPlaceholder) {
+            input.placeholder = defaultPlaceholder;
+        }
     }
 
-
-    // Valida os campos
     if (inputFname === '') {
-        error(nome);
-        imgErro(imgError)
+        showError(nome, spanErroNome);
+        formValid = false;
+    } else {
+        removeError(nome, spanErroNome, 'First Name');
     }
 
     if (inputLname === '') {
-        error(sobrenome);
-        imgErro(imgError)
+        showError(sobrenome, spanErroSobrenome);
+        formValid = false;
+    } else {
+        removeError(sobrenome, spanErroSobrenome, 'Last Name');
     }
 
     if (emailinput === '') {
-        error(email);
-        imgErro(imgError)
+        showError(email, spanErroEmail, 'example@email.com');
+        formValid = false;
+    } else if (!/\S+@\S+\.\S+/.test(emailinput)) {
+        showError(email, spanErroEmail, 'example@email.com');
+        formValid = false;
+    } else {
+        removeError(email, spanErroEmail, 'Email Address');
     }
 
     if (inputsenha === '') {
-        error(senha);
-        imgErro(imgError)
+        showError(senha, spanErroPassword);
+        formValid = false;
+    } else {
+        removeError(senha, spanErroPassword, 'Password');
     }
-})  
+
+    if (formValid) {
+        alert('Dados cadastrados com sucesso!');
+    } else {
+        event.preventDefault();
+        alert('Por favor, corrija os erros antes de enviar o formulário.');
+    }
+});
+
+document.querySelectorAll('.input').forEach((input) => {
+    input.addEventListener('input', () => {
+        const span = input.nextElementSibling;
+        input.style.borderColor = '';
+        if (span.tagName === 'SPAN') {
+            span.style.display = 'none';
+        }
+    });
+});
