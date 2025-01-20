@@ -134,10 +134,22 @@ main {
 #text-erro-nome,
 #text-erro-sobrenome,
 #text-erro-email,
-#text-erro-password{
+#text-erro-password {
     text-align: right;
     color: red;
     display: none;
     font-size: .8rem;
     font-style: italic;
+}
+
+@media screen and (max-width: 900px) {
+    .form {
+        min-width: 350px;
+    }
+}
+
+@media screen and (max-width: 656px) {
+    main {
+        flex-direction: column;
+    }
 }
