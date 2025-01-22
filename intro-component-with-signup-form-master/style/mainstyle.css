@@ -37,16 +37,20 @@ body {
 
 main {
     display: flex;
-    max-width: 1440px;
+    width: 1440px;
     padding-inline: 30px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 50px;
 }
 
 .left {
     color: var(--white);
-    max-width: 400px;
+    max-width: 500px;
+}
+
+.left h1 {
+    font-size: 3rem;
 }
 
 .left p {
@@ -122,7 +126,11 @@ main {
     width: 100%;
 }
 
-.img_erro {
+#img_erro_nome,
+#img_erro_sobrenome,
+#img_erro_email, 
+#img_erro_password
+ {
     max-width: 25px;
     position: absolute;
     right: 20px;
@@ -152,4 +160,13 @@ main {
     main {
         flex-direction: column;
     }
+
+    .left p {
+        text-align: center;
+    }
+
+    .left h1{
+        text-align: center;
+    }
+
 }
