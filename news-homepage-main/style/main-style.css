@@ -84,6 +84,7 @@ header #close_menu_icon {
   right: -100%;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
+  z-index: 11;
 }
 
 header #menu_icon img,
@@ -102,7 +103,9 @@ header #close_menu_icon img {
   background-color: #fff;
   height: 100%;
   transition: all 0.3s ease-in-out;
+  z-index: 10;
 }
+
 #menu-mobile ul {
   display: flex;
   justify-content: start;
@@ -110,12 +113,14 @@ header #close_menu_icon img {
   margin-top: 100px;
   margin-left: 20px;
 }
+
 /* FINAL MOBILE STYLES */
 
 @media screen and (max-width: 747px) {
   header #menu-desktop {
     display: none;
   }
+
   header #menu_icon {
     display: flex;
   }
@@ -188,12 +193,30 @@ main {
   margin-top: 30px;
 }
 
-/* Garantindo que o menu mobile e o botão de fechar não estejam visiveis em displays grandes. */
 @media screen and (max-width: 747px) {
   main {
     grid-gap: 15px;
   }
 }
+
+@media screen and (max-width: 600px) {
+  main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main-article {
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .article-text-button button {
+    margin-bottom: 30px;
+  }
+
+}
+
 /* FINAL MAIN */
 
 /* COMEÇO ASIDE */
@@ -244,17 +267,29 @@ aside p {
   }
 }
 
+@media screen and (max-width: 600px) {
+  aside {
+    max-width: 100%;
+  }
+
+  .aside-box {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+}
+
+
 /* FINAL ASIDE */
 
 /* COMEÇO CARDS */
 .cards-conteiner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 50px;
   gap: 20px;
+  padding-inline: 10px;
 }
 
 .cards-conteiner img {
@@ -265,7 +300,6 @@ aside p {
 
 .cards {
   display: flex;
-  justify-content: center;
 }
 
 .cards h1 {
@@ -299,6 +333,16 @@ aside p {
   }
 }
 
+@media screen and (max-width: 600px) {
+  .cards-conteiner {
+    flex-direction: column;
+  }
+
+  .cards {
+    align-items: center;
+  }
+}
+
 /* FINAL CARDS */
 
 /* ATTRIBUTION */
@@ -307,6 +351,7 @@ aside p {
   text-align: center;
   margin-top: 30px;
 }
+
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
