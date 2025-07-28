@@ -193,6 +193,12 @@ main {
   margin-top: 30px;
 }
 
+.article-text-button button:hover {
+  background-color: var(--clr-neutral-very-dark-blue);
+  color: var(--clr-primary-red);
+  transition: all 0.1s ease-in;
+}
+
 @media screen and (max-width: 747px) {
   main {
     grid-gap: 15px;
@@ -208,13 +214,11 @@ main {
   .main-article {
     display: flex;
     flex-direction: column;
-
   }
 
   .article-text-button button {
     margin-bottom: 30px;
   }
-
 }
 
 /* FINAL MAIN */
@@ -277,7 +281,6 @@ aside p {
     padding-top: 5px;
   }
 }
-
 
 /* FINAL ASIDE */
 
