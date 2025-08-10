@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+    <style>
+        .switch {
+            width: 100%;
+            height: 200px;
+            background-color: lightcyan;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Esconde o checkbox mas mantém acessibilidade */
+        input {
+            display: none;
+        }
+
+        label {
+            background-color: rgb(189, 60, 60);
+            width: 100px;
+            height: 50px;
+            position: relative;
+            /* referência para a bolinha */
+            border-radius: 50px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+
+        label::after {
+            content: '';
+            width: 40px;
+            height: 40px;
+            background-color: black;
+            position: absolute;
+            /* fica dentro do label */
+            border-radius: 50%;
+            top: 5px;
+            left: 7px;
+            transition: transform 0.3s ease;
+            /* animação */
+        }
+
+        /* Quando marcado, a bolinha vai para a direita */
+        input:checked+label::after {
+            transform: translateX(50px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="switch">
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1"></label>
+
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2"></label>
+
+        <input type="checkbox" id="checkbox3">
+        <label for="checkbox3"></label>
+
+        <input type="checkbox" id="checkbox4">
+        <label for="checkbox4"></label>
+
+        <input type="checkbox" id="checkbox5">
+        <label for="checkbox5"></label>
+
+        <input type="checkbox" id="checkbox6">
+        <label for="checkbox6"></label>
+
+        <input type="checkbox" id="checkbox7">
+        <label for="checkbox7"></label>
+
+        <input type="checkbox" id="checkbox8">
+        <label for="checkbox8"></label>
+    </div>
+
+    <div id="status">Ativos: 0</div>
+
+    <button id="filtroAtivos">Mostrar apenas ativos</button>
+    <button id="filtroInativos">Mostrar apenas inativos</button>
+    <button id="filtroTodos">Mostrar todos</button>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.switch input[type="checkbox"]');
+        const statusDiv = document.getElementById('status');
+
+        function atualizarStatus() {
+            let ativos = 0;
+            checkboxes.forEach(cb => {
+                if (cb.checked) ativos++;
+            });
+            statusDiv.textContent = `Ativos: ${ativos}`;
+        }
+
+        // Adiciona evento para todos os checkboxes
+        checkboxes.forEach(cb => {
+            cb.addEventListener('change', atualizarStatus);
+        });
+
+        document.getElementById('filtroAtivos').addEventListener('click', () => {
+            checkboxes.forEach(cb => {
+                if (!cb.checked) {
+                    cb.style.display = 'none';
+                    cb.nextElementSibling.style.display = 'none';
+                } else {
+                    cb.style.display = '';
+                    cb.nextElementSibling.style.display = '';
+                }
+            });
+        });
+
+        document.getElementById('filtroInativos').addEventListener('click', () => {
+            checkboxes.forEach(cb => {
+                if (cb.checked) {
+                    cb.style.display = 'none';
+                    cb.nextElementSibling.style.display = 'none';
+                } else {
+                    cb.style.display = '';
+                    cb.nextElementSibling.style.display = '';
+                }
+            });
+        });
+
+        document.getElementById('filtroTodos').addEventListener('click', () => {
+            checkboxes.forEach(cb => {
+                cb.style.display = '';
+                cb.nextElementSibling.style.display = '';
+            });
+        });
+    </script>
+</body>
+
+
+</html>
